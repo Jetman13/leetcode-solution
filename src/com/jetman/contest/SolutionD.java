@@ -81,18 +81,18 @@ public class SolutionD {
     public static void main(String[] args) {
 
 
-        long start = System.currentTimeMillis();
-        int tem = 0;
-        int[][] am = new int[10001][10001];
-        for (int i = 0; i < 100000; i++) {
-            for (int j = 0; j < 10000; j++) {
-                tem = (tem + i*j)%42343;
-                am[i%10000][j%10000] = i+j;
-            }
+//        long start = System.currentTimeMillis();
+//        int tem = 0;
+//        int[][] am = new int[10001][10001];
+//        for (int i = 0; i < 100000; i++) {
+//            for (int j = 0; j < 10000; j++) {
+//                tem = (tem + i*j)%42343;
+//                am[i%10000][j%10000] = i+j;
+//            }
+//
+//        }
 
-        }
-
-        System.out.println(""+(System.currentTimeMillis() - start));
+//        System.out.println(""+(System.currentTimeMillis() - start));
 
 
 
