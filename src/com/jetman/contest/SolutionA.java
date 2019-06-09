@@ -1,6 +1,7 @@
 package src.com.jetman.contest;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -10,31 +11,44 @@ import java.util.List;
  **/
 public class SolutionA {
 
+    public String gcdOfStrings(String str1, String str2) {
 
-    public boolean divisorGame(int N) {
-        boolean[] flag = new boolean[1003];
+        int len1 = str1.length();
+        int len2 = str2.length();
+        String str = str1 + str2;
 
-        flag[1] = false;
-        flag[2] = true;
-        flag[3] = false;
-        flag[4] = true;
-
-        for (int i = 5; i <= N; i++) {
-            boolean k = false;
-            for (int j = 1; j <= i/2; j++) {
-                if (i%j == 0 && !flag[i-j]) {
-                    k = true;
+        for (int i = 1000; i > 0 ; i--) {
+            if (len1%i == 0 && len2%i==0) {
+                if (work(str,i)) {
+                    return print(str1,i);
                 }
             }
-            flag[i] = k;
         }
+        return "";
+    }
 
-        return flag[N];
+    private String print(String str, int i) {
+        return str.substring(0,i);
+    }
+
+    private boolean work(String str, int i) {
+        int len = str.length();
+        int fo = len/i;
+        int index = 0;
+        for (int j = 0; j < fo; j++) {
+            for (int k = 0; k < i; k++) {
+                if (str.charAt(index++) != str.charAt(k)) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
 
     public static void main(String[] args) {
-        int[] a = {0,1,1,1,1,1};
+        int[] a = {0,2,6,2,7,5};
+//        System.out.printf(""+new SolutionA().lastStoneWeight(a));
 
 
 

@@ -1,5 +1,7 @@
 package src.com.jetman.contest;
 
+import com.sun.jmx.remote.internal.ArrayQueue;
+
 import java.util.*;
 
 /**
@@ -8,53 +10,38 @@ import java.util.*;
  * @create: 2019-04-04 20:59
  **/
 public class SolutionB {
+    public int maxSatisfied(int[] customers, int[] grumpy, int X) {
 
-
-    boolean[][] flag = new boolean[1002][1002];
-    int[][] row = {{0,1},{1,0},{0,-1},{-1,0}};
-    int targei,targej;
-    int targeColor;
-    int orginColor;
-    public int[][] colorBorder(int[][] grid, int i, int j, int color) {
-        if (grid[i][j] == color) return grid;
-
-        targei = i;
-        targej = j;
-        targeColor = color;
-        orginColor = grid[i][j];
-
-        return dfs(grid,i,j);
-    }
-
-    private int[][] dfs(int[][] grid,int i,int j) {
-        if (isOver(i,j,grid.length,grid[0].length) || flag[i][j] || grid[i][j] != orginColor) {
-            return grid;
+        int tmp = 0;
+        int len = customers.length;
+        for (int i = 0; i < len; i++) {
+            tmp += grumpy[i] == 1 ? 0 : customers[i];
         }
 
-        flag[i][j] = true;
-        for (int k = 0; k < 4; k++) {
-            int ri = i + row[k][0];
-            int rj = j + row[k][1];
-            dfs(grid,ri,rj);
-            if (isOver(ri,rj,grid.length,grid[0].length) || (grid[ri][rj] != orginColor && !flag[ri][rj])) {
-                grid[i][j] = targeColor;
-            }
+        int l = 0;
+        int r = 0;
+        int xtmp = 0;
+        for (; r < X; r++) {
+            xtmp += grumpy[r] == 1 ? customers[r] : 0;
         }
-        return grid;
-    }
 
-    private boolean isOver(int i,int j,int li,int lj) {
-        if (i < 0 || j < 0 || i >= li || j >= lj) {
-            return true;
+        int ans = tmp + xtmp;
+
+        for (l++; r < len; r++,l++) {
+            if (grumpy[l-1] == 1) xtmp -= customers[l-1];
+            if (grumpy[r] == 1) xtmp += customers[r];
+            ans = Math.max(ans,tmp+xtmp);
         }
-        return false;
+        return ans;
     }
 
 
     public static void main(String[] args) {
-
-
-
+        long sta = System.currentTimeMillis();
+        int[] a = {1,0,1,2,1,1,7,5};
+        int[] b = {0,1,0,1,0,1,0,1};
+        System.out.println(""+new SolutionB().maxSatisfied(a,b,3));
+        System.out.println("all = "+(System.currentTimeMillis()-sta));
 
     }
 
