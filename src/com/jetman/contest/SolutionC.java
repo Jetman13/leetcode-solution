@@ -9,63 +9,54 @@ import java.util.*;
  **/
 public class SolutionC {
 
-    public int[] addNegabinary(int[] arr1, int[] arr2) {
+    class Node {
+        public int l;
+        public int r;
+        public int val;
+        public Node(int l,int r) {
+            this.l = l;
+            this.r = r;
+        }
+    }
 
-        arr1 = reverseArray(arr1);
-        arr2 = reverseArray(arr2);
-        int len1 = arr1.length;
-        int len2 = arr2.length;
-        int maxLen = Math.max(len1,len2);
+    int spx[] = {0,1,0,-1,1,1,-1,-1};
+    int spy[] = {1,0,-1,0,-1,1,1,-1};
 
-        int[] ans = new int[1005];
+    public int shortestPathBinaryMatrix(int[][] grid) {
+        int len = grid.length;
+        if (grid[0][0] == 1 || grid[len-1][len-1] == 1) {
+            return -1;
+        }
+        if (len == 1) return 1;
 
-        int p = 0;
-        int i = 0;
-        for (i = 0; i < 1005; i++) {
-            int tmp = (i<len1 ? arr1[i] : 0) + (i<len2 ? arr2[i] : 0);
 
-            if (i >= maxLen && p == 0) {
-                break;
+        Queue<Node> q = new LinkedList<>();
+        Node start = new Node(0,0);
+        q.add(start);//将s作为起始顶点加入队列
+        grid[0][0] = 2;
+        while(!q.isEmpty())
+        {
+            Node top=q.poll();//取出队首元素
+            for (int j = 0; j < 8; j++) {
+                int x = top.l + spx[j];
+                int y = top.r + spy[j];
+                if (flag(x,y,len) && grid[x][y] == 0) {
+                    Node tmp = new Node(x,y);
+                    q.add(tmp);
+                    grid[x][y] = grid[top.l][top.r] + 1;
+                }
             }
 
-            tmp -=p;
-            if (tmp >= 0) {
-                ans[i] = tmp%2;
-                p = tmp/2;
-            } else {
-                ans[i] = 1;
-                p = -1;
-            }
         }
 
-        List<Integer> real = new ArrayList<>();
-        boolean f = true;
-        for (int j = 0; j < i ; j++) {
-            if (f && ans[i-j-1] == 0) {
-                continue;
-            }
-            f = false;
-            real.add(ans[i-j-1]);
-        }
-        return real.size() == 0 ? new int[1]:to(real);
+        return grid[len-1][len-1] == 0 ? -1 : grid[len-1][len-1]-1;
 
     }
 
-    private int[] to(List<Integer> a) {
-        int[] ans = new int[a.size()];
-        for (int i = 0; i < a.size(); i++) {
-            ans[i] = a.get(i);
-        }
-        return ans;
-    }
-
-
-    private  int[] reverseArray(int[] array) {
-        int[] newArr = new int[array.length];
-        for (int i = 0; i < array.length; i++) {
-            newArr[i] = array[array.length-i-1];
-        }
-        return newArr;
+    private boolean flag(int x, int y,int len) {
+        if (x < 0 || y < 0) return false;
+        if (x>=len || y>=len) return false;
+        return true;
     }
 
     public static void main(String[] args) {
@@ -73,7 +64,7 @@ public class SolutionC {
 //        String[] a = {"ksqvsyq","ks","kss","czvh","zczpzvdhx","zczpzvh","zczpzvhx","zcpzvh","zczvh","gr","grukmj","ksqvsq","gruj","kssq","ksqsq","grukkmj","grukj","zczpzfvdhx","gru"};
         int[] a = {1};
         int[] b = {1};
-        System.out.printf(""+new SolutionC().addNegabinary(a,b));
+//        System.out.printf(""+new SolutionC().addNegabinary(a,b));
         long start = System.currentTimeMillis();
 //        System.out.println(System.currentTimeMillis() - start);
 
