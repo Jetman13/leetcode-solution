@@ -12,29 +12,28 @@ import java.util.List;
  **/
 public class SolutionA {
 
-    public void duplicateZeros(int[] arr) {
-        int[] cp = new int[arr.length];
-        List<Integer> link = new ArrayList<>();
-
-        for (int i = 0; i < arr.length; i++) {
-            link.add(arr[i]);
-            if (arr[i] == 0) {
-                link.add(arr[i]);
+    public int[] distributeCandies(int candies, int num_people) {
+        int[] p = new int[num_people];
+        int num = 1;
+        int index = 0;
+        while (candies > 0) {
+            if (candies >= num) {
+                p[index] += num;
+                candies-=num;
+            } else {
+                p[index]+= candies;
+                candies = 0;
             }
-            if (link.size() > arr.length) break;
-
+            num++;
+            index = (index+1)%num_people;
         }
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = link.get(i);
-        }
-
+        return p;
     }
-
 
 
     public static void main(String[] args) {
         int[] a = {0,2,6,2,7,5};
-        new SolutionA().duplicateZeros(a);
+//        new SolutionA().duplicateZeros(a);
         System.out.printf("");
 
 
