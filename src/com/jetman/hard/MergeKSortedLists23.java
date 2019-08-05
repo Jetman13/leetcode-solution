@@ -6,9 +6,8 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**
- * @program: za-graphene-anan
  * @description: https://leetcode-cn.com/problems/merge-k-sorted-lists/
- * @author: za-zhangmin
+ * @author: Jetman
  * @create: 2019-04-18 21:08
  **/
 public class MergeKSortedLists23 {

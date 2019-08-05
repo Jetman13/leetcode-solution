@@ -4,9 +4,9 @@ package src.com.jetman.medium;
 import javafx.util.Pair;
 
 /**
- * @program: za-graphene-anan
+ * @program:
  * @description: https://leetcode.com/problems/flatten-binary-tree-to-linked-list/
- * @author: za-zhangmin
+ * @author: Jetman
  * @create: 2019-03-31 20:21
  **/
 public class FlattenBinaryTreeToLinkedList114 {

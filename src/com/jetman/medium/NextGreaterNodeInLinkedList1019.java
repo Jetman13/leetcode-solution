@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @program: za-graphene-anan
+ * @program:
  * @description: https://leetcode-cn.com/problems/next-greater-node-in-linked-list/
- * @author: za-zhangmin
+ * @author: Jetman
  * @create: 2019-04-05 15:31
  **/
 public class NextGreaterNodeInLinkedList1019 {

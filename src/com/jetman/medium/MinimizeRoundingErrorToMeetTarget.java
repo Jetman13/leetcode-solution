@@ -4,9 +4,9 @@ import java.math.BigDecimal;
 import java.text.DecimalFormat;
 
 /**
- * @program: za-graphene-anan
+ * @program:
  * @description: https://leetcode-cn.com/contest/college/2019-spring/problems/minimize-rounding-error-to-meet-target/
- * @author: za-zhangmin
+ * @author: Jetman
  * @create: 2019-04-14 21:02
  **/
 public class MinimizeRoundingErrorToMeetTarget {

@@ -2,6 +2,8 @@ package src.com.jetman.contest;
 
 
 
+import src.com.jetman.base.TreeNode;
+
 import java.util.*;
 
 /**
@@ -11,39 +13,36 @@ import java.util.*;
  **/
 public class SolutionB {
 
+    int[] nums;
+    TreeNode xNode;
+    public boolean btreeGameWinningMove(TreeNode root, int n, int x) {
+        nums = new int[n+1];
+        if (n == 1) return false;
 
-    public List<Integer> pathInZigZagTree(int label) {
+        nums[root.val] = work(root,x);
 
-        int[] pow = new int[32];
-        pow[1] = 1;
-        for (int i = 2; i < 30; i++) {
-            pow[i] = (pow[i-1]+1)*2 -1;
-        }
-
-        List<Integer> ans = new ArrayList<>();
-        ans.add(label);
-        while (label > 1) {
-            label/=2;
-            int p = getStart(pow,label);
-            int s = pow[p-1] + 1;
-            int e = pow[p];
-            label = s+e-label;
-            ans.add(label);
-        }
-
-        Collections.reverse(ans);
-        return ans;
+        int numL = xNode.left != null ? nums[xNode.left.val] : 0;
+        int numR = xNode.right != null ? nums[xNode.right.val] : 0;
+        int numP = n - numL - numR - 1;
+        int mid = n/2;
+        if (numL > mid || numR > mid || numP > mid) return true;
+        return false;
 
     }
 
-    private int getStart(int[] pow, int label) {
-        for (int i = 1; i < 31; i++) {
-            if (pow[i] >= label && pow[i-1] < label) {
-                return i;
-            }
+    private int work(TreeNode root, int x) {
+        if (root == null) return 0;
+
+        if (root.val == x) {
+            xNode = root;
         }
-        return -1;
+
+        int num = work(root.left,x);
+        num+=work(root.right,x);
+        nums[root.val] = num + 1;
+        return nums[root.val];
     }
+
 
     public static void main(String[] args) {
         long sta = System.currentTimeMillis();

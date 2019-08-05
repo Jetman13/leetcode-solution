@@ -1,9 +1,8 @@
 package src.com.jetman.base;
 
 /**
- * @program: za-graphene-anan
  * @description:
- * @author: za-zhangmin
+ * @author: Jetman
  * @create: 2019-04-14 16:34
  **/
 public class TreeNode {

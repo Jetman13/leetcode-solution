@@ -1,9 +1,8 @@
 package src.com.jetman.base;
 
 /**
- * @program: za-graphene-anan
  * @description:
- * @author: za-zhangmin
+ * @author: Jetman
  * @create: 2019-04-18 21:09
  **/
 public class ListNode {

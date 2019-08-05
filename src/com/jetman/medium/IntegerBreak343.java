@@ -1,9 +1,9 @@
 package src.com.jetman.medium;
 
 /**
- * @program: za-graphene-anan
+ * @program:
  * @description: Integer Break 343
- * @author: za-zhangmin
+ * @author: Jetman
  * @create: 2019-03-30 14:42
  *
  * https://leetcode.com/problems/integer-break/

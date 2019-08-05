@@ -1,9 +1,8 @@
 package src.com.jetman.hard;
 
 /**
- * @program: za-graphene-anan
  * @description: https://leetcode-cn.com/contest/weekly-contest-141/problems/shortest-common-supersequence/
- * @author: za-zhangmin
+ * @author: Jetman
  * @create: 2019-06-16 14:51
  **/
 public class ShortestCommonSupersequence1092 {

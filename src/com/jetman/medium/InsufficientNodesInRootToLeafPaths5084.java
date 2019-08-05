@@ -3,9 +3,9 @@ package src.com.jetman.medium;
 import src.com.jetman.base.TreeNode;
 
 /**
- * @program: za-graphene-anan
+ * @program:
  * @description: https://leetcode-cn.com/contest/weekly-contest-140/problems/insufficient-nodes-in-root-to-leaf-paths/
- * @author: za-zhangmin
+ * @author: Jetman
  * @create: 2019-06-09 14:04
  **/
 public class InsufficientNodesInRootToLeafPaths5084 {

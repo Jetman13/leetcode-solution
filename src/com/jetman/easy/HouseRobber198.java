@@ -3,9 +3,8 @@ package src.com.jetman.easy;
 import java.util.Arrays;
 
 /**
- * @program: za-graphene-anan
  * @description: https://leetcode-cn.com/problems/house-robber/
- * @author: za-zhangmin
+ * @author: Jetman
  * @create: 2019-04-06 10:32
  **/
 public class HouseRobber198 {

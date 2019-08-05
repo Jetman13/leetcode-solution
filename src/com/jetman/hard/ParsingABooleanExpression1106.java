@@ -4,9 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @program: za-graphene-anan
  * @description: https://leetcode-cn.com/contest/weekly-contest-143/problems/parsing-a-boolean-expression/
- * @author: za-zhangmin
+ * @author: Jetman
  * @create: 2019-06-30 17:04
  **/
 public class ParsingABooleanExpression1106 {

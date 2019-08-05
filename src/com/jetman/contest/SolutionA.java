@@ -1,9 +1,6 @@
 package src.com.jetman.contest;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  * @description: Solution
@@ -12,29 +9,38 @@ import java.util.List;
  **/
 public class SolutionA {
 
-    public int[] distributeCandies(int candies, int num_people) {
-        int[] p = new int[num_people];
-        int num = 1;
-        int index = 0;
-        while (candies > 0) {
-            if (candies >= num) {
-                p[index] += num;
-                candies-=num;
-            } else {
-                p[index]+= candies;
-                candies = 0;
-            }
-            num++;
-            index = (index+1)%num_people;
+    public int movesToMakeZigzag(int[] nums) {
+
+        if (nums.length == 1) return 0;
+
+        int ans = 0;
+        int len = nums.length;
+
+        for (int i = 1; i < len; i+=2) {
+            ans += cal(nums,i);
         }
-        return p;
+
+        int ans1 = 0;
+        for (int i = 0; i < len; i+=2) {
+            ans1 += cal(nums,i);
+        }
+        return Math.min(ans,ans1);
+    }
+
+    private int cal(int[] nums, int i) {
+        int l = i-1;
+        int r = i+1;
+        int k = Integer.MAX_VALUE;
+        if (l >= 0 && nums[i] > nums[l]) k = nums[i] - nums[l] + 1;
+        if (r < nums.length && nums[i] > nums[r]) k = Math.min(nums[i] - nums[r] + 1,k);
+        return k;
     }
 
 
     public static void main(String[] args) {
         int[] a = {0,2,6,2,7,5};
 //        new SolutionA().duplicateZeros(a);
-        System.out.printf("");
+//        System.out.println(new SolutionA().defangIPaddr("1.1.1.1"));
 
 
 

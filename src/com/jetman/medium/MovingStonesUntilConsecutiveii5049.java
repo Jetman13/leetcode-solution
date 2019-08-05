@@ -3,9 +3,9 @@ package src.com.jetman.medium;
 import java.util.Arrays;
 
 /**
- * @program: za-graphene-anan
+ * @program:
  * @description:
- * @author: za-zhangmin
+ * @author: Jetman
  * @create: 2019-05-06 22:02
  **/
 public class MovingStonesUntilConsecutiveii5049 {

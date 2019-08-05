@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * @description: https://leetcode.com/problems/intersection-of-two-arrays-ii/
- * @author: za-zhangmin
+ * @author: Jetman
  * @create: 2019-03-30 16:44
  **/
 public class IntersectionOfTwoArraysII350 {

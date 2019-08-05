@@ -3,9 +3,9 @@ package src.com.jetman.medium;
 import src.com.jetman.base.TreeNode;
 
 /**
- * @program: za-graphene-anan
+ * @program:
  * @description:
- * @author: za-zhangmin
+ * @author: Jetman
  * @create: 2019-05-05 21:26
  **/
 public class BinarySearchTreeToGreaterSumTree5050 {

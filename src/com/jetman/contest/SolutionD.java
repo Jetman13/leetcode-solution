@@ -4,9 +4,8 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
- * @program: za-graphene-anan
  * @description: test
- * @author: za-zhangmin
+ * @author: Jetman
  * @create: 2019-04-04 20:59
  **/
 public class SolutionD {

@@ -1,9 +1,9 @@
 package src.com.jetman.medium;
 
 /**
- * @program: za-graphene-anan
+ * @program:
  * @description: https://leetcode-cn.com/problems/flip-columns-for-maximum-number-of-equal-rows/
- * @author: za-zhangmin
+ * @author: Jetman
  * @create: 2019-06-08 12:55
  **/
 public class FlipColumnsForMaximumNumberOfEqualRows1072 {

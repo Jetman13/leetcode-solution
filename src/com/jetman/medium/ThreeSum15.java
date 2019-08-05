@@ -3,9 +3,9 @@ package src.com.jetman.medium;
 import java.util.*;
 
 /**
- * @program: za-graphene-anan
+ * @program:
  * @description: https://leetcode-cn.com/problems/3sum
- * @author: za-zhangmin
+ * @author: Jetman
  * @create: 2019-05-25 14:50
  **/
 public class ThreeSum15 {

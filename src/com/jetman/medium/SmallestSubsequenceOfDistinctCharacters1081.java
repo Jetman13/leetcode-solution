@@ -6,9 +6,9 @@ import java.util.List;
 import java.util.Stack;
 
 /**
- * @program: za-graphene-anan
+ * @program:
  * @description: https://leetcode-cn.com/problems/smallest-subsequence-of-distinct-characters/
- * @author: za-zhangmin
+ * @author: Jetman
  * @create: 2019-06-15 23:12
  **/
 public class SmallestSubsequenceOfDistinctCharacters1081 {

@@ -4,9 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @program: za-graphene-anan
  * @description: https://leetcode-cn.com/contest/weekly-contest-140/problems/occurrences-after-bigram/
- * @author: za-zhangmin
+ * @author: Jetman
  * @create: 2019-06-09 13:44
  **/
 public class OccurrencesAfterBigram5083 {

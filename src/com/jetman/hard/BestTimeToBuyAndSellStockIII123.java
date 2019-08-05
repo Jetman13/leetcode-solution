@@ -1,9 +1,8 @@
 package src.com.jetman.hard;
 
 /**
- * @program: za-graphene-anan
  * @description: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/
- * @author: za-zhangmin
+ * @author: Jetman
  * @create: 2019-03-31 00:28
  **/
 public class BestTimeToBuyAndSellStockIII123 {

@@ -4,9 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @program: za-graphene-anan
+ * @program:
  * @description: https://leetcode-cn.com/problems/letter-tile-possibilities/
- * @author: za-zhangmin
+ * @author: Jetman
  * @create: 2019-06-22 15:09
  **/
 public class LetterTilePossibilities1079 {

@@ -1,9 +1,9 @@
 package src.com.jetman.medium;
 
 /**
- * @program: za-graphene-anan
+ * @program:
  * @description:
- * @author: za-zhangmin
+ * @author: Jetman
  * @create: 2019-05-05 22:38
  **/
 public class MinimumScoreTriangulationOfPolygon5047 {

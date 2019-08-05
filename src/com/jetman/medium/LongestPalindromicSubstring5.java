@@ -3,9 +3,9 @@ package src.com.jetman.medium;
 import java.util.stream.IntStream;
 
 /**
- * @program: za-graphene-anan
+ * @program:
  * @description: https://leetcode-cn.com/problems/longest-palindromic-substring/
- * @author: za-zhangmin
+ * @author: Jetman
  * @create: 2019-04-10 21:30
  **/
 public class LongestPalindromicSubstring5 {

@@ -1,9 +1,9 @@
 package src.com.jetman.medium;
 
 /**
- * @program: za-graphene-anan
+ * @program:
  * @description: https://leetcode-cn.com/problems/zigzag-conversion/
- * @author: za-zhangmin
+ * @author: Jetman
  * @create: 2019-04-20 17:24
  **/
 public class ZigzagConversion6 {
